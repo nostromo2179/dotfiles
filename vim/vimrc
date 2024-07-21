@@ -1,0 +1,108 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+"               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+"               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
+"               ██║   ██║██║██╔████╔██║██████╔╝██║
+"               ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║
+"                ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
+"                 ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""
+
+call plug#begin('~/.config/vim/plugged')
+
+    Plug 'vim-airline/vim-airline'                  " plugin for airline type status line
+    Plug 'vim-airline/vim-airline-themes'           " plugin for airline themes
+
+call plug#end()
+
+
+""""""""""""""""""""""""""""""
+" => Basic settings
+""""""""""""""""""""""""""""""
+
+filetype plugin on                                  " enable filetype plugin
+
+set mouse=a                                         " enable mouse support
+syntax on                                           " enable syntax highlightning
+set number relativenumber                           " enable relative line numbers
+
+
+:highlight Cursorline cterm=bold ctermbg=black      " highlight current line
+set hlsearch                                        " enable highlight search pattern
+
+set ignorecase                                      " enable smartcase search sensitivity
+set smartcase
+
+set encoding=utf-8                                  " set encoding
+
+set splitbelow splitright                           " splits open below and on the right
+
+set tabstop=4                                       " tabstop: width of tab character
+set softtabstop=4                                   " softtabstop: fine tunes the amount of whitespace
+set shiftwidth=4                                    " shiftwidth: determines the amount of whitespace normal mode
+set textwidth=79                                    " textwidth: text wrap width
+set expandtab                                       " expandtab: when on use space instead of tab
+set autoindent                                      " autoident: autoindent in new line
+
+set showmatch                                       " show the matching part of pairs [] {} ()
+set showmode                                        " show the mode you are on, on the last line
+
+set history=100                                    " number of commands saved in history, default is 20
+
+set clipboard+=unnamedplus                          " use system clipboard
+
+set wildmode=longest,list,full                      " enable autocompletion
+
+set viminfo=
+
+""""""""""""""""""""""""""""""
+" => Basic AutoCmd
+""""""""""""""""""""""""""""""
+
+" vertically center document when entering insert mode
+autocmd InsertEnter * norm zz
+
+" remove trailing whitespaces on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+""""""""""""""""""""""""""""""
+" => Keybindings
+""""""""""""""""""""""""""""""
+
+" map leader key to 'space'
+let mapleader=" "
+
+" Spellcheck set tu en_US
+map <leader>s :setlocal spell! spelllang=en_us<CR>
+
+"Shortcutting split navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-W>l
+
+" Shortcut split opening
+nnoremap <leader>h :split<Space>
+nnoremap <leader>v :vsplit<Space>
+
+" Alias replace all to S
+
+nnoremap S :%s//gI<Left><Left><Left>
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+
+" Always show the status line
+set laststatus=2
+
+" Airline theme
+let g:airline_theme='base16_gruvbox_dark_hard'

@@ -1,0 +1,101 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ ](color_bg3)\
+$os\
+$username\
+[ ](bg:color_yellow fg:color_bg3)\
+$directory\
+[ ](fg:color_yellow bg:color_aqua)\
+$git_branch\
+$git_status\
+[ ](fg:color_aqua bg:color_bg3)\
+$python\
+$ruby\
+$custom\
+[ ](fg:color_bg3)\
+\n\n$character"""
+
+palette = 'gruvbox-material-dark'
+
+[palettes.gruvbox-material-dark]
+color_fg0 = "#d4be98"
+color_fg0alt = "#fbf1c7"
+color_fg1 = "#ddc7a1"
+color_bg1 = "#282828"
+color_bg3 = "#3c3836"
+color_red = "#ea6962"
+color_orange = "#e78a4e"
+color_yellow = "#d8a657"
+color_green = "#a9b665"
+color_aqua = "#89b482"
+color_blue = "#7daea3"
+color_purple = "#d3869b"
+
+[os]
+disabled = false
+style = "bg:color_bg3 fg:color_green"
+
+[os.symbols]
+Void = " "
+Windows = "󰍲 "
+Ubuntu = "󰕈 "
+
+[username]
+show_always = true
+style_user = "bg:color_bg3 fg:color_fg0alt"
+style_root = "bg:color_bg3 fg:color_red"
+format = '[ $user ]($style)'
+
+
+[directory]
+style = "bg:color_yellow fg:color_fg0alt"
+format = "[$path ]($style)"
+truncation_length = 1
+truncation_symbol = "/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $branch ](fg:color_fg0alt bg:color_aqua)]($style)'
+
+[git_status]
+style = "bg:color_aqua"
+format = '[[($all_status$ahead_behind )](fg:color_fg0alt bg:color_aqua)]($style)'
+
+[python]
+symbol = " "
+style = "bg:color_bg3"
+format = '[[ $symbol ](fg:color_yellow bg:color_bg3)]($style)'
+
+[ruby]
+symbol = " "
+style = "bg:color_bg3"
+format = '[[ $symbol( $version) ](fg:color_red bg:color_bg3)]($style)'
+
+# Custom programming file detection
+
+[custom.shellscript]
+symbol = " "
+detect_extensions = ['sh']
+style = "bg:color_bg3"
+format = '[[ $symbol ](fg:color_fg1 bg:color_bg3)]($style)'
+
+[custom.powershell]
+symbol = "󰨊 "
+detect_extensions = ['ps1']
+style = "bg:color_bg3"
+format = '[[ $symbol ](fg:color_blue bg:color_bg3)]($style)'
+
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[ ❯](bold fg:color_green)'
+error_symbol = '[ ❯](bold fg:color_red)'
+vimcmd_symbol = '[ ](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[ ](bold fg:color_purple)'
+vimcmd_replace_symbol = '[ ](bold fg:color_purple)'
+vimcmd_visual_symbol = '[ ](bold fg:color_yellow)'
