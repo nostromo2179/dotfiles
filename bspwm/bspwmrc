@@ -67,8 +67,8 @@ bspc rule -a Thunar state=floating layer=normal rectangle=1800x1000+160+90 deskt
 
 # Flatpak rules
 bspc rule -a steam state=floating layer=normal rectangle=1920x1080+160+98 desktop='^4' follow=on center=true
-bspc rule -a Lutris state=floating layer=normal rectangle=1920x1080+160+98 desktop='^4' follow=on center=true
-bspc rule -a bottles state=floating layer=normal rectangle=1920x1080+160+98 center=true
+bspc rule -a Lutris state=floating layer=normal rectangle=1413x1116 desktop='^4' follow=on center=true
+bspc rule -a bottles state=floating layer=normal rectangle=1328x223 center=true
 bspc rule -a heroic state=floating layer=normal desktop='^4' follow=on center=true
 bspc rule -a warehouse state=floating layer=normal center=true
-bspc rule -a com.github.tchx84.Flatseal state=floating layer=normal center=true
+bspc rule -a com.github.tchx84.Flatseal state=floating layer=normal rectangle=1228x1133 center=true
