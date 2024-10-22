@@ -18,6 +18,10 @@ alt + e
 alt + d
 	rofi -show drun
 
+# Flameshot gui
+alt + p
+    /usr/bin/flameshot gui
+
 # make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
