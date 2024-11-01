@@ -64,6 +64,7 @@ bspc rule -a Galculator state=floating layer=normal center=true
 bspc rule -a KeePassXC state=floating layer=normal rectangle=1800x1000+160+90 desktop='^5' follow=on center=true
 bspc rule -a Firefox layer=normal desktop='^2' follow=on
 bspc rule -a Thunar state=floating layer=normal rectangle=1800x1000+160+90 desktop='^3' follow=on center=true
+bspc rule -a Orage state=floating layer=normal rectangle=600x200+160+90 center=true
 
 # Flatpak rules
 bspc rule -a steam state=floating layer=normal rectangle=1920x1080+160+98 desktop='^4' follow=on center=true
