@@ -24,7 +24,7 @@ xsetroot -cursor_name left_ptr
 
 # Number of monitors
 
-bspc monitor -d "󰍹 " " " " " "󰊗 " " "
+bspc monitor -d "󰍹 " " " " " "󰊗 " " "
 
 
 # Config
@@ -67,7 +67,7 @@ bspc rule -a Thunar state=floating layer=normal rectangle=1800x1000+160+90 deskt
 bspc rule -a Orage state=floating layer=normal rectangle=600x200+160+90 center=true
 
 # Flatpak rules
-bspc rule -a steam state=floating layer=normal rectangle=1920x1080+160+98 desktop='^4' follow=on center=true
+bspc rule -a steam state=tiled layer=normal desktop='^5' follow=on center=true
 bspc rule -a Lutris state=floating layer=normal rectangle=1413x1116 desktop='^4' follow=on center=true
 bspc rule -a bottles state=floating layer=normal rectangle=1328x223 center=true
 bspc rule -a heroic state=floating layer=normal desktop='^4' follow=on center=true
