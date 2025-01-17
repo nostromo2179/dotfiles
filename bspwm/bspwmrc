@@ -5,6 +5,7 @@
 
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc &
 picom &
+udiskie &
 feh --no-fehbg --bg-scale ~/pictures/wallpapers/gruvbox-astronaut.png
 
 # Polybar
@@ -61,7 +62,6 @@ bspc config focused_border_color 	"#d8a657"
 bspc rule -r *:*
 
 bspc rule -a Galculator state=floating layer=normal center=true
-bspc rule -a KeePassXC state=floating layer=normal rectangle=1800x1000+160+90 desktop='^5' follow=on center=true
 bspc rule -a Firefox layer=normal desktop='^2' follow=on
 bspc rule -a Thunar state=floating layer=normal rectangle=1800x1000+160+90 desktop='^3' follow=on center=true
 bspc rule -a Orage state=floating layer=normal rectangle=600x200+160+90 center=true
