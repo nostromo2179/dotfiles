@@ -17,7 +17,7 @@ $XDG_CONFIG_HOME/polybar/launch.sh
 xrandr --dpi 130
 
 # Set US and HR keyboard layout
-setxkbmap -layout hr,us
+setxkbmap -layout hr,us,de
 
 # Fix cursor to always theme it
 xsetroot -cursor_name left_ptr
